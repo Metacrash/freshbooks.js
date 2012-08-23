@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/Metacrash/freshbooks.js.png)](http://travis-ci.org/Metacrash/freshbooks.js)
 #Freshbooks.js
 
 Freshbooks.js is a node.js module providing a wrapper to the [FreshBooks]
