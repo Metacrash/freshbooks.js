@@ -1,20 +1,35 @@
 {
-  "name": "freshbooks"
-, "description": "Node.js wrapper for FreshBooks (www.freshbooks.com) API"
-, "version": "0.2.1"
-, "author": {
-    "name": "Marc Loney"
-  , "email": "<marc@metacrash.com.au>"
-  }
-, "homepage": "https://github.com/Metacrash/freshbooks.js"
-, "dependencies": { "libxmljs": "0.13.0" }
-, "main": "index"
-, "engines": { "node": ">= 0.6.0" }
-, "devDependencies": { "mocha": "0.3.x" }
-, "scripts": { "test": "make test" }
-, "publishConfig": { "tag": "latest" }
-, "repository": {
-    "type": "git"
-  , "url": "git://github.com/Metacrash/freshbooks.js.git#v0.2.1"
-  }
+    "name": "freshbooks",
+    "description": "Node.js wrapper for FreshBooks (www.freshbooks.com) API",
+    "version": "2.0.0",
+    "author": "Flow XO <support@flowxo.com>",
+    "contributors": [{
+        "name": "Marc Loney",
+        "email": "<marc@metacrash.com.au>"
+    }, {
+        "name": "Tom Spencer",
+        "email": "fiznool@gmail.com"
+    }],
+    "homepage": "https://github.com/flowxo/freshbooks.js",
+    "dependencies": {
+        "libxmljs": "^0.18.0"
+    },
+    "main": "index",
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "devDependencies": {
+        "mocha": "*"
+    },
+    "scripts": {
+        "test": "make test"
+    },
+    "publishConfig": {
+        "tag": "latest"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/flowxo/freshbooks.js.git"
+    }
 }

@@ -7,8 +7,7 @@ describe('Tax', function() {
 
   describe("create()", function() {
     it("should create a new tax", function(done) {
-      tax.name = "Test Tax";
-
+      tax.name = "" + Date.now();
       tax.create(function(err, tax) {
         done(err);
       });
@@ -18,7 +17,7 @@ describe('Tax', function() {
   describe("update()", function() {
     it("should update a tax", function(done) {
       tax.rate = "25.00";
-      
+
       tax.update(function(err, tax) {
         done(err);
       });
@@ -31,7 +30,7 @@ describe('Tax', function() {
         done(err);
       });
     });
-  });  
+  });
 
   describe("list()", function() {
     it("should list an array of taxes", function(done) {
@@ -47,5 +46,5 @@ describe('Tax', function() {
         done(err);
       });
     });
-  });  
+  });
 });

@@ -7,7 +7,7 @@ describe('Category', function() {
 
   describe("create()", function() {
     it("should create a new category", function(done) {
-      category.name = "Test Category 1";
+      category.name = "Test Category " + Date.now();
 
       category.create(function(err, category) {
         done(err);
@@ -17,8 +17,8 @@ describe('Category', function() {
 
   describe("update()", function() {
     it("should update a category", function(done) {
-      category.name = "Test Category 2";
-      
+      category.name = "Test Category " + Date.now();
+
       category.update(function(err, category) {
         done(err);
       });
@@ -31,8 +31,8 @@ describe('Category', function() {
         done(err);
       });
     });
-  });  
-  
+  });
+
   describe("list()", function() {
     it("should list an array of categories", function(done) {
       category.list({"client_id": category.client_id}, function(err, categories) {
@@ -47,5 +47,5 @@ describe('Category', function() {
         done(err);
       });
     });
-  });  
+  });
 });

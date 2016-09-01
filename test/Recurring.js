@@ -13,10 +13,10 @@ describe('Recurring', function() {
                         , unit_cost: '5.00'
                         , quantity: '5'
                         , type: 'Item'});
-                        
+
       recurring.frequency = "monthly";
 
-      recurring.create(function(err, recurring) {
+      recurring.create(function(err) {
         done(err);
       });
     });
@@ -24,8 +24,12 @@ describe('Recurring', function() {
 
   describe("update()", function() {
     it("should update a recurring invoice", function(done) {
-      recurring.notes = "Lorem Ipsum";
-      recurring.update(function(err, recurring) {
+      var id = recurring.recurring_id;
+
+      var updatingRecurring = new freshbooks.Recurring();
+      updatingRecurring.recurring_id = id;
+      updatingRecurring.notes = "Lorem Ipsum";
+      updatingRecurring.update(function(err) {
         done(err);
       });
     });
@@ -37,8 +41,8 @@ describe('Recurring', function() {
         done(err);
       });
     });
-  });  
-  
+  });
+
   describe("list()", function() {
     it("should list an array of recurring invoices", function(done) {
       recurring.list({"client_id": recurring.client_id}, function(err, invoices) {
@@ -53,5 +57,5 @@ describe('Recurring', function() {
         done(err);
       });
     });
-  });  
+  });
 });
